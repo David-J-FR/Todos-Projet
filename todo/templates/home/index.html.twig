@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello TasksController!
+{% endblock %}
+
+{% block body %}
+	<style>
+		.example-wrapper {
+			margin: 1em auto;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+		.example-wrapper code {
+			background: #F5F5F5;
+			padding: 2px 6px;
+		}
+	</style>
+
+	{# <img src="{{ asset ('images/Todos_partido.png') }}" width="100px"> #}
+	{# 
+	message flash si l'ajout est un succès pour l'ajout, l'édit ou la suppression d'une tâche :  #}
+	{% for message in app.flashes('success') %}
+		<div class="alert alert-success">
+			{{ message }}
+		</div>
+
+	{% endfor %}
+
+		{% if is_granted('ROLE_USER') %}
+
+		<a href="{{ path ('app_categories')}}">{{'lists of all tasks'|trans}}</a>
+		<br>
+		<a href="{{ path ('app_add_tasks')}}">{{'Adding a task'|trans}}</a>
+
+
+	{% endif %}
+
+	<div class="example-wrapper">
+
+    <h1 class="text-center mt-5 mb-5">{{ 'Your tasks'|trans }}</h1>
+
+    <table class="table table-secondary table-striped text-center">
+        <thead>
+            <tr>
+                <th scope="col" >{{'Task'|trans}}</th>
+                <th scope="col" class="w-50">{{'Description'|trans}}</th>
+                <th scope="col" class="w-50">{{'Due Date'|trans}}</th>
+                <th scope="col">{{'Priority'|trans}}</th>
+                <th scope="col">{{'Category'|trans}}</th>
+                <th scope="col"> {{'Modify'|trans}}</th>
+                <th scope="col"> {{'Deletion '|trans}}</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for task in tasks %}
+            <tr>
+                <td>{{ task.name }}</td>
+                <td class="w-50">{{ task.description }}</td>
+                <td class="w-50">{{ task.duedate|date('d-m-Y') }}</td>
+                <td>{{ task.priority }}</td>
+                <td>{{ task.Category.name }}</td>
+                <td>
+                    <a class="text-body-emphasis" href="{{ path('app_edit_tasks',{id:task.id}) }}">{{ 'Edit'|trans }}</a>
+                </td>
+                <td>
+                    <a class="text-body-emphasis" href="{{ path('app_delete_tasks',{id:task.id}) }}">{{ 'Delete'|trans }}</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,68 @@
+# Navbar
+Logout: "Déconnexion"
+Login: "Connexion"
+
+
+# Page inscription
+Page Register: Page d'inscription
+Register: "Inscription"
+Email: "Adresse mail"
+Firstname: "Prénom"
+Lastname: "Nom"
+Image profil : "Image de profil"
+Password: "Mot de passe"
+Agree terms: "Accepter les termes"
+register: "S'inscrire"
+Repeat Password: "Répéter le mot de passe"
+  
+# Page connexion
+Page connexion: "Page de connexion"
+Disconnect: "Déconnexion"
+log in: "Se connecter"
+Reset password: "Mot de passe oublié"
+
+# Page password email envoyé 
+Password Reset Email Sent: "Mail de réinitialisation de mot de passe"
+try again: "réessayez"
+If you don't receive an email please check your spam folder or: "Si vous ne recevez pas d'email, veuillez vérifier votre dossier spam ou "
+If an account matching your email exists, then an email was just sent that contains a link that you can use to reset your password.: "Si un compte correspondant à votre adresse e-mail existe, un e-mail contenant un lien que vous pouvez utiliser pour réinitialiser votre mot de passe vient d'être envoyé."
+This link will expire in: "Ce lien expirera dans"
+
+# Page du reset password
+Send password reset email: "Envoyez l'email de réinitialisation de mot de passe"
+
+
+# Page de l'ajout de tâches 
+Back to home tasks: "Retour aux tâches à l'accueil"
+Adding a task : "Ajout d'une tâche"
+Task name  : "Nom de la tâche"
+Select a category : "Sélectionner une catégorie"
+Urgent : "Urgente"
+Medium : "Moyenne"
+Low : "Basse"
+taches recurrentes: "recurring tasks"
+Create task : "Créer la tâche"
+
+# Page de tâches (home)
+
+Edit : "Modifier"
+Delete : "Supprimer"
+lists of all tasks: "Liste de toutes les tâches"
+Your tasks: "Vos tâches"
+Task: "Tâche"
+Description: "Description"
+Due Date: "Date limite"
+Priority: "Priorité"
+Category: "Catégorie"
+Modify: "Modification"
+Deletion: "Suppression"
+
+
+
+
+# Page de modification 
+Edit task: "Modifier la tâche"
+The task has been modified: "La tâche a bien été modifiée"
+
+# Page listing
+Associated tasks: "Tâches associées"

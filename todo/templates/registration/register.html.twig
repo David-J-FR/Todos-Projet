@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{'Page Register'|trans}}{% endblock %}
+
+{% block body %}
+
+
+    <div class="container mt-5">
+        <h1 class="mb-4 d-flex justify-content-center">{{'Register'|trans}}</h1>
+
+        {{ form_errors(registrationForm) }}
+
+        {{ form_start(registrationForm, {'attr': {'class': 'form-horizontal'}}) }}
+            <div class="mb-3">
+                {{ form_row(registrationForm.email, { label: 'Email'|trans }) }}
+            </div>
+            <div class="mb-3">
+                {{ form_row(registrationForm.firstname, { label: 'Firstname'|trans }) }}
+            </div>
+            <div class="mb-3">
+                {{ form_row(registrationForm.lastname, { label: 'Lastname'|trans }) }}
+            </div>
+            <div class="mb-3">
+                {{ form_row(registrationForm.imgAvatar, { label: 'Image profil'|trans }) }}
+            </div>
+            <div class="mb-3">
+                {{ form_row(registrationForm.plainPassword.first, { label: 'Password'|trans }) }}
+            </div>
+            <div class="mb-3">
+                {{ form_row(registrationForm.plainPassword.second, { label: 'Repeat Password'|trans }) }}
+            </div>
+            <div class="mb-3 form-check">
+                {{ form_row(registrationForm.agreeTerms, { label: 'Agree terms'|trans }) }}
+                {{ form_label(registrationForm.agreeTerms, null, {'label_attr': {'class': 'form-check-label'}}) }}
+            </div>
+            <div class="mb-3 d-flex justify-content-center">
+                <button type="submit" class="btn btn-secondary">{{'register'|trans}}</button>
+            </div>
+        {{ form_end(registrationForm) }}
+    </div>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{'Password Reset Email Sent'|trans}}{% endblock %}
+
+{% block body %}
+
+<div class="d-flex flex-column mt-5 align-content-center ">
+    <p class="d-flex justify-content-center">
+        {{'If an account matching your email exists, then an email was just sent that contains a link that you can use to reset your password.'|trans}}
+        {{"This link will expire in"|trans}} {{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.
+    </p>
+    <p class="d-flex justify-content-center">{{"If you don't receive an email please check your spam folder or"|trans}} <a class="ms-1" href="{{ path('app_forgot_password_request') }}">{{'try again'|trans}}</a>.</p>
+
+  </div>  
+{% endblock %}
